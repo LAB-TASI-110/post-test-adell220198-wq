@@ -1,0 +1,28 @@
+1. Kamu adalah seorang pengelola gudang digital yang bertugas membuat program untuk menghitung total stok barang berdasarkan kategori tertentu, di mana sistem akan menerima tiga jenis input yaitu jumlah total data ($N$), deret nilai stok barang ($s_1, s_2, ..., s_N$), dan satu kode kategori barang yang ingin dicari. Berdasarkan gambar pola penyimpanan, kamu harus memahami bahwa setiap barang dikelompokkan secara spesifik (seperti Dasi SD, Gula, Rok Pramuka, dan Minyak) dan programmu harus mampu memfilter deret stok yang masuk agar hanya menjumlahkan angka stok yang sesuai dengan kategori yang diminta oleh pengguna. Silakan buatkan logika program yang efektif untuk memproses deret tersebut dan tampilkan hasil akhir berupa total stok hanya untuk kategori barang yang dipilih dengan akurat.
+2. kode nya ga pakai library?
+3. knp int total kamu buat = 0
+4. trs knp int i =1, i <=N, i++
+5.Masukkan jumlah data:4
+Pilih kategori yang ingin dicari
+1 = dasiSD
+2 =Gula
+3 = Rok Pramuka
+4 = Minyak 
+
+kalo udh kek gini di comppiler, dia mint apa lagi
+6. Masukkan jumlah data:3
+Pilih kategori yang ingin dicari
+1 = dasiSD
+2 =Gula
+3 = Rok Pramuka
+4 = Minyak
+4
+Masukkan kategori barang: 4
+Masukkan stok barang: 4
+Masukkan kategori barang: 4
+Masukkan stok barang: 4
+
+
+Masukkan kategori barang: 
+
+knp dia msih kek gini saat si run 
