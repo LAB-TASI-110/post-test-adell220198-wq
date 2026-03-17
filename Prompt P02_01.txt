@@ -1,3 +1,58 @@
 1.Kamu adalah seorang asisten programer yang bertugas mensimulasikan sistem perhitungan otomatis layanan Del-Express untuk dua mahasiswa bernama Butet dan Ucok, di mana sistem harus menerima input berulang berupa kode kota (MDN, BLG, JKT, SBY) dan berat paket Butet dalam kilogram ($x$), lalu berhenti ketika menerima input "END". Dalam perhitungan ini, kamu harus menentukan berat paket Ucok berdasarkan formula $1,5 \times$ berat paket Butet, kemudian menghitung total berat gabungan keduanya serta total ongkos kirim berdasarkan tarif per kota yaitu Medan (8000), Balige (5000), Jakarta (12000), dan Surabaya (13000). Selain itu, kamu harus menerapkan logika promo Lebaran yang memberikan diskon ongkos kirim sebesar 10% jika total berat pengiriman melebihi 10 kg, serta memberikan keterangan "Asuransi Gratis" jika pengiriman dilakukan ke luar pulau (Jakarta dan Surabaya). Silakan tampilkan output berupa struk pembayaran yang memuat kota tujuan, berat paket Butet, berat paket Ucok, total berat, total ongkos setelah diskon (jika ada), serta informasi promo yang kamu peroleh untuk setiap transaksi berdasarkan contoh input yang diberikan.
 2. itu yang ada slas apakah komentar? bisa itu di hps tapi tetap jalan?
 3. dan saya run itu apakah, memang inputny nnti satu satu gt di pilihnopsinya, atau di isi smua input trs maka kluar dia skaligus ouputnya?, mksd ku saat input itu kan ada opsi apakah MDN, nah outputny lgsng muncul gt, apakah ga bisa dia ytunggu dulu slesi input yg ku msukkan entah dri kota mana, kayak 3 kota, lalu dia muncul?
+4. Suatu sore yang cukup sibuk di kampus, dua mahasiswa IT Del, Ucok dan Butet, sedang duduk di depan asrama sambil memandangi beberapa dus besar yang tergeletak di samping mereka. Setelah menyelesaikan minggu yang penuh dengan tugas kuliah dan praktikum, mereka akhirnya punya waktu untuk mengirimkan beberapa barang ke kampung halaman masing-masing.
+
+“Waduh, kalau kita kirim lewat jasa biasa mahal juga ya,” kata Butet sambil menimbang salah satu dus miliknya.
+
+Ucok kemudian tersenyum dan menunjuk sebuah brosur yang ia temukan di papan pengumuman kampus.
+
+“Tenang saja, Tet. Katanya ada jasa pengiriman baru namanya Del-Express. Sistemnya transparan dan perhitungannya otomatis,” ujar Ucok.
+
+Butet langsung terlihat tertarik. “Wah, cocok nih. Kita kan anak IT, masa masih pakai hitung manual!”
+
+Mereka pun berjalan menuju kantor layanan Del-Express yang berada tidak jauh dari kampus. Setibanya di sana, mereka melihat sebuah papan besar berisi daftar ongkos kirim per kilogram ke beberapa kota tujuan.
+
+<p align="center">
+  <img src="image/ongkir.png" width="500">
+</p>
+
+Tidak jauh dari papan daftar ongkir, terdapat sebuah poster promo menarik yang ditempel di dinding.
+
+<p align="center">
+  <img src="image/promo.png" width="400">
+</p>
+
+Saat petugas menimbang paket mereka, ternyata terdapat sedikit perbedaan ukuran dus yang mereka gunakan.
+<p align="center">
+  <img src="image/perbandingan.png" width="500">
+</p>
+
+Petugas Del-Express kemudian menjelaskan bahwa sistem pengiriman mereka bekerja secara otomatis. Petugas hanya perlu memasukkan kode kota tujuan serta berat paket milik Butet, dan sistem akan menghitung seluruh biaya pengiriman termasuk berat paket milik Ucok.
+<p align="center">
+  <img src="image/kode.png" width="500">
+</p>
+
+**Input**
+
+```bash
+MDN
+5
+JKT
+3
+BLG
+4
+END
+
+```
+
+**Output**
+Struk Pembayaran yang terdiri dari:
+Kota tujuan,
+Berat paket Butet,
+Berat paket Ucok,
+Total berat,
+Total ongkos kirim,
+Informasi promo yang diperoleh, 
+
+buatlah program bahasa C dari kasus diatas (sertakan input dan output yang relevan dan terstruktur. Platform atau lingkungan eksekusi spesifik dimana program ini dijalankan adalah virtual studio code. tidak ada batasan negatif atau hal yang harus dihindari , lingkup pengerjaan lebih untuk mandiri tugas kuliah pemograman prosedural. tentunya ada standar kualitas dan keaamanan, jangan memberikan kode pemograman yang pas di run nanti ada error. aku ingin kamu bertindak  sebagai pesona, berikan langkah langkah kode pemograman. lengkap dengan tipe data, fungsi dan lain sebagainya. tidak perlu pakai contoh tambahan. kamu ga perlu pakai pembatas khusus untuk memisshkan berbagai bagian konteks dalam responku. menggunakan spesifikasi bhs C yaitu C23, trus pakai library khusus gitu kyak stdio.h, stdlib.h, string.h. Sistem operasi yang bakal dipakai saat dieksekus adalah windows. Sebagai seorang ahli pemograman C, terdiri dri 1 fungsi saja

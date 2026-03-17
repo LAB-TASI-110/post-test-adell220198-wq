@@ -19,3 +19,6 @@ Mie Goreng 1 = 12000
 Tambah pesanan (y/t): 
 
  kek gini nya nnti output yg dihrapkan brdsr soal?
+ 6. Buatlah sebuah sistem yang mendukung operasional kafetaria IT Del.
+
+buatlah program bahasa C dari kasus diatas (sertakan input dan output yang relevan dan terstruktur. Platform atau lingkungan eksekusi spesifik dimana program ini dijalankan adalah virtual studio code. tidak ada batasan negatif atau hal yang harus dihindari , lingkup pengerjaan lebih untuk mandiri tugas kuliah pemograman prosedural. tentunya ada standar kualitas dan keaamanan, jangan memberikan kode pemograman yang pas di run nanti ada error. aku ingin kamu bertindak  sebagai pesona, berikan langkah langkah kode pemograman. lengkap dengan tipe data, fungsi dan lain sebagainya. tidak perlu pakai contoh tambahan. kamu ga perlu pakai pembatas khusus untuk memisshkan berbagai bagian konteks dalam responku. menggunakan spesifikasi bhs C yaitu C23, trus pakai library khusus gitu kyak stdio.h, stdlib.h, string.h. Sistem operasi yang bakal dipakai saat dieksekus adalah windows. Sebagai seorang ahli pemograman C, terdiri dri 1 fungsi saja

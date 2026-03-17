@@ -1,75 +1,84 @@
-//
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int main() {
 
-    char kota[10];
-    float beratButet, beratUcok, totalBerat;
-    int tarif;
-    float totalOngkos, diskon;
+    char kode[10];
+    char kota[20];
+
+    float beratButet;
+    float beratUcok;
+    float totalBerat;
+
+    int ongkirPerKg;
+    float totalOngkir;
+
+    int luarPulau;
 
     while (1) {
 
-        printf("\nMasukkan kode kota (MDN/BLG/JKT/SBY) atau END untuk selesai: ");
-        scanf("%s", kota);
+        scanf("%s", kode);
 
-        if (strcmp(kota, "END") == 0) {
+        if (strcmp(kode, "END") == 0) {
             break;
         }
 
-        printf("Masukkan berat paket Butet (kg): ");
         scanf("%f", &beratButet);
 
         beratUcok = 1.5 * beratButet;
         totalBerat = beratButet + beratUcok;
 
-        if (strcmp(kota, "MDN") == 0) {
-            tarif = 8000;
+        luarPulau = 0;
+
+        if (strcmp(kode, "MDN") == 0) {
+            strcpy(kota, "Medan");
+            ongkirPerKg = 8000;
         }
-        else if (strcmp(kota, "BLG") == 0) {
-            tarif = 5000;
+        else if (strcmp(kode, "BLG") == 0) {
+            strcpy(kota, "Balige");
+            ongkirPerKg = 5000;
         }
-        else if (strcmp(kota, "JKT") == 0) {
-            tarif = 12000;
+        else if (strcmp(kode, "JKT") == 0) {
+            strcpy(kota, "Jakarta");
+            ongkirPerKg = 12000;
+            luarPulau = 1;
         }
-        else if (strcmp(kota, "SBY") == 0) {
-            tarif = 13000;
+        else if (strcmp(kode, "SBY") == 0) {
+            strcpy(kota, "Surabaya");
+            ongkirPerKg = 13000;
+            luarPulau = 1;
         }
         else {
-            printf("Kode kota tidak valid\n");
+            printf("Kode kota tidak valid\n\n");
             continue;
         }
 
-        totalOngkos = totalBerat * tarif;
+        totalOngkir = totalBerat * ongkirPerKg;
 
-        diskon = 0;
-        if (totalBerat > 10) {
-            diskon = 0.10 * totalOngkos;
+        int dapatPromo = 0;
+
+        if (totalBerat > 10 && luarPulau == 1) {
+            dapatPromo = 1;
+            totalOngkir = totalOngkir * 0.9;
         }
 
-        totalOngkos = totalOngkos - diskon;
+        printf("===== STRUK PEMBAYARAN =====\n");
+        printf("Kota Tujuan        : %s\n", kota);
+        printf("Berat Paket Butet  : %.2f kg\n", beratButet);
+        printf("Berat Paket Ucok   : %.2f kg\n", beratUcok);
+        printf("Total Berat        : %.2f kg\n", totalBerat);
+        printf("Total Ongkir       : Rp %.2f\n", totalOngkir);
 
-        printf("\n===== STRUK DEL-EXPRESS =====\n");
-        printf("Kota Tujuan       : %s\n", kota);
-        printf("Berat Butet       : %.2f kg\n", beratButet);
-        printf("Berat Ucok        : %.2f kg\n", beratUcok);
-        printf("Total Berat       : %.2f kg\n", totalBerat);
-        printf("Total Ongkos      : Rp %.2f\n", totalOngkos);
-
-        if (totalBerat > 10) {
-            printf("Promo             : Diskon Lebaran 10%%\n");
+        if (dapatPromo) {
+            printf("Promo              : Diskon 10%% + Asuransi Gratis\n");
+        }
+        else {
+            printf("Promo              : Tidak ada promo\n");
         }
 
-        if (strcmp(kota, "JKT") == 0 || strcmp(kota, "SBY") == 0) {
-            printf("Bonus             : Asuransi Gratis\n");
-        }
-
-        printf("=============================\n");
-
+        printf("\n");
     }
-
-    printf("\nProgram selesai\n");
 
     return 0;
 }

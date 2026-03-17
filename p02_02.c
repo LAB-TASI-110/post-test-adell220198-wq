@@ -1,36 +1,38 @@
-//
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main() {
+
     int N;
-    int kategori;
-    int stok;
-    int kodeCari;
+    int stok[100];
+    char kategori[100][50];
+    char cari[50];
     int total = 0;
 
-    printf("Masukkan jumlah data:");
+    printf("Masukkan jumlah data barang: ");
     scanf("%d", &N);
 
-    printf("Pilih kategori yang ingin dicari\n");
-    printf("1 = dasiSD\n");
-    printf("2 =Gula\n");
-    printf("3 = Rok Pramuka\n");
-    printf("4 = Minyak\n");
-    scanf("%d", &kodeCari);
+    for(int i = 0; i < N; i++) {
+        printf("\nData barang ke-%d\n", i + 1);
 
-    for(int i = 1; i <= N; i++) {
-        printf("Masukkan kategori barang: ");
-        scanf("%d", &kategori);
+        printf("Stok barang: ");
+        scanf("%d", &stok[i]);
 
-        printf("Masukkan stok barang: ");
-        scanf("%d", &stok);
+        printf("Kode kategori: ");
+        scanf("%s", kategori[i]);
+    }
 
-        if(kategori == kodeCari) {
-            total = total + stok;
+    printf("\nMasukkan kategori yang ingin dihitung: ");
+    scanf("%s", cari);
+
+    for(int i = 0; i < N; i++) {
+        if(strcmp(kategori[i], cari) == 0) {
+            total += stok[i];
         }
     }
 
-    printf("Total stok kategori yang dipilih = %d\n", total);
+    printf("\nTotal stok untuk kategori %s adalah: %d\n", cari, total);
 
     return 0;
 }
